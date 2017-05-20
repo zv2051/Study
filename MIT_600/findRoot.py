@@ -6,8 +6,10 @@
 #**************************************************************************
 
 def binSearchRoot(number, power,epsilon):
-    low = 0
-    high = number
+    if number < 0 and power%2 == 0:
+	return None
+    low = min(-1,number)
+    high = max(1,number)
     ans = (low + high) / 2.0
     while abs(ans ** power - number) > epsilon:
         if ans ** power < number:
