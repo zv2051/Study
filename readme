@@ -2,4 +2,8 @@ learn git in this repo (test)
 add 1 line,git under in glp
 git has mutable index called stage.
 git tracket change of file
+<<<<<<< HEAD
 new dev and simple
+=======
+new dev and simple
+>>>>>>> featurel
