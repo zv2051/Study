@@ -10,6 +10,7 @@ var = input("enter string: ")
 
 def testPal(var):
     def toChar(string):
+        string = string.low()
         ans = ''
         for c in string:
             if c in "abcdefghijklmnopqrstuvwxyz0123456789":
