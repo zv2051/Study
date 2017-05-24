@@ -8,7 +8,7 @@
 
 def findDivisors(number1, number2):
     result = ()
-    for i in range(1,min(number1, number2)):
+    for i in range(1,min(number1, number2) + 1):
         if number1 % i == 0 and number2 % i == 0:
             result += (i,)
     return result
