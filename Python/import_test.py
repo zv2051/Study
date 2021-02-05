@@ -1,2 +1,2 @@
 from abstest import my_abs
-print(my_abs(-101))
+print(my_abs("123"))
