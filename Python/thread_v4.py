@@ -1,15 +1,19 @@
-from threading import Thread
+from threading import Thread, Lock
 from time import sleep
 
 class Account(object):
     def __init__(self):
         self._blance = 0
+        self._lock = Lock()
 
     def deposit(self, money):
-        print('in _deposit')
-        new_blance = self._blance + money
-        sleep(0.1)
-        self._blance = new_blance
+        self._lock.acquire()
+        try:
+            new_blance = self._blance + money
+            sleep(0.1)
+            self._blance = new_blance
+        finally:
+            self._lock.release()
     @property
     def blance(self):
         return self._blance
